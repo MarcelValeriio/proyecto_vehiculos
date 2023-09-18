@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('cedula')->unique();
-            $table->string('status');
-            $table->rememberToken();
+        Schema::create('images', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('vehicle_id');
+            $table->foreign('vehicle_id')
+                ->references('id')
+                ->on('vehicles');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        //
     }
 };

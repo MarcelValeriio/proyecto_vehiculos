@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('cedula')->unique();
-            $table->string('status');
-            $table->rememberToken();
+        Schema::create('kinds', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('kind');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        //
     }
 };

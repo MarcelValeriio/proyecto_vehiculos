@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('car_dealerships', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('name');
-            $table->string('cedula')->unique();
-            $table->string('status');
-            $table->rememberToken();
+            $table->string('rif')->unique();
+            $table->string('address');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        //
     }
 };
