@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class SocialMedia extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'car_dealership_id',
+        'instagram',
+        'twitter',
+        'facebook'
+
+    ];
+
+    protected $table = "social_medias";
 }

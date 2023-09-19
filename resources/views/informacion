@@ -1,0 +1,61 @@
+catalogo vehiculos 
+
+consecionadrio 
+id
+nombre
+rif
+direccion 
+descripcion
+
+vehiculos
+id
+consecionario_id
+titulo
+modelo_id
+año
+transmision
+kilometraje
+descricpcion
+tipo
+aire boolean
+precio
+marca opcional
+oferta booleano 
+destacado booleano 
+
+
+imagenes
+id
+vehiculo_id
+imagen
+
+redes
+id
+consecionario_id
+instagram
+face
+twwit
+
+
+tipos
+id
+tipo
+
+marcas 
+id
+marca
+
+modelos
+id
+marca_id
+modelo
+
+
+usuairo
+id
+name
+cedula
+estaus 
+
+
+roles y permisos
