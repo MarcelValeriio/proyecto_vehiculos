@@ -12,4 +12,14 @@ class Modelo extends Model
         'brand_id',
         'model',
     ];
+
+    public function vehicle()
+    {
+        return $this->hasMany(Vehicle::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
 }

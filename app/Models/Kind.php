@@ -11,4 +11,9 @@ class Kind extends Model
     protected $fillable = [
         'kind'
     ];
+
+    public function vehicle()
+    {
+        return $this->hasMany(Vehicle::class);
+    }
 }

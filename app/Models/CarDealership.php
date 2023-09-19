@@ -16,4 +16,13 @@ class CarDealership extends Model
 
     ];
     protected $table = "car_dealerships";
+    public function vehicles()
+    {
+        return $this->hasMany(Vehicle::class);
+    }
+
+    public function social()
+    {
+        return $this->hasMany(SocialMedia::class);
+    }
 }

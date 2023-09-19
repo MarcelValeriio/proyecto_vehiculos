@@ -17,4 +17,8 @@ class SocialMedia extends Model
     ];
 
     protected $table = "social_medias";
+    public function car_dealership()
+    {
+        return $this->belongsTo(CarDealership::class);
+    }
 }

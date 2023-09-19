@@ -23,4 +23,29 @@ class Vehicle extends Model
         'offer',
         'highlight'
     ];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
+    public function car_dealership()
+    {
+        return $this->belongsTo(CarDealership::class);
+    }
+
+    public function modelo()
+    {
+        return $this->belongsTo(Modelo::class);
+    }
+
+    public function kind()
+    {
+        return $this->belongsTo(Kind::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
 }
